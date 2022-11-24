@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4B56F66-C6C3-466C-8E4D-6DD878470F65}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ISBusForms</RootNamespace>
+    <AssemblyName>ISBusForms</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatabaseORM\Archiv_doby_trasy.cs" />
+    <Compile Include="DatabaseORM\Autobus.cs" />
+    <Compile Include="DatabaseORM\Linka.cs" />
+    <Compile Include="DatabaseORM\Linka_Ridic.cs" />
+    <Compile Include="DatabaseORM\Linka_Zastavka.cs" />
+    <Compile Include="Forms\EditBusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditBusForm.Designer.cs">
+      <DependentUpon>EditBusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditLinkaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditLinkaForm.Designer.cs">
+      <DependentUpon>EditLinkaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditRidicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditRidicForm.Designer.cs">
+      <DependentUpon>EditRidicForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditSpojForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditSpojForm.Designer.cs">
+      <DependentUpon>EditSpojForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditZastForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditZastForm.Designer.cs">
+      <DependentUpon>EditZastForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LinkyZastavkouForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LinkyZastavkouForm.Designer.cs">
+      <DependentUpon>LinkyZastavkouForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListArchivForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListArchivForm.Designer.cs">
+      <DependentUpon>ListArchivForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListBusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListBusForm.Designer.cs">
+      <DependentUpon>ListBusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListLinkaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListLinkaForm.Designer.cs">
+      <DependentUpon>ListLinkaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListRidicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListRidicForm.Designer.cs">
+      <DependentUpon>ListRidicForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListSpojForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListSpojForm.Designer.cs">
+      <DependentUpon>ListSpojForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListZastForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListZastForm.Designer.cs">
+      <DependentUpon>ListZastForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PolohaSpojeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PolohaSpojeForm.Designer.cs">
+      <DependentUpon>PolohaSpojeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SearchSpojForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SearchSpojForm2.Designer.cs">
+      <DependentUpon>SearchSpojForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StatistikaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StatistikaForm.Designer.cs">
+      <DependentUpon>StatistikaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TimeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TimeForm.Designer.cs">
+      <DependentUpon>TimeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TimeForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TimeForm2.Designer.cs">
+      <DependentUpon>TimeForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TimeForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TimeForm3.Designer.cs">
+      <DependentUpon>TimeForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ZmenitTrasuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ZmenitTrasuForm.Designer.cs">
+      <DependentUpon>ZmenitTrasuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DatabaseORM\Ridic.cs" />
+    <Compile Include="DatabaseORM\SpojZjednoduseny.cs" />
+    <Compile Include="DatabaseORM\StatistikaLinek.cs" />
+    <Compile Include="DatabaseORM\Zastavka.cs" />
+    <Compile Include="DatabaseORM\sql_database\Archiv_doby_trasyTable.cs" />
+    <Compile Include="DatabaseORM\sql_database\AutobusTable.cs" />
+    <Compile Include="DatabaseORM\sql_database\Database.cs" />
+    <Compile Include="DatabaseORM\sql_database\LinkaTable.cs" />
+    <Compile Include="DatabaseORM\sql_database\Linka_RidicTable.cs" />
+    <Compile Include="DatabaseORM\sql_database\Linka_ZastavkaTable.cs" />
+    <Compile Include="DatabaseORM\sql_database\RidicTable.cs" />
+    <Compile Include="DatabaseORM\sql_database\ZastavkaTable.cs" />
+    <Compile Include="Forms\SearchSpojForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SearchSpojForm.Designer.cs">
+      <DependentUpon>SearchSpojForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\EditBusForm.resx">
+      <DependentUpon>EditBusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditLinkaForm.resx">
+      <DependentUpon>EditLinkaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditRidicForm.resx">
+      <DependentUpon>EditRidicForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditSpojForm.resx">
+      <DependentUpon>EditSpojForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditZastForm.resx">
+      <DependentUpon>EditZastForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LinkyZastavkouForm.resx">
+      <DependentUpon>LinkyZastavkouForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListArchivForm.resx">
+      <DependentUpon>ListArchivForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListBusForm.resx">
+      <DependentUpon>ListBusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListLinkaForm.resx">
+      <DependentUpon>ListLinkaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListRidicForm.resx">
+      <DependentUpon>ListRidicForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListSpojForm.resx">
+      <DependentUpon>ListSpojForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListZastForm.resx">
+      <DependentUpon>ListZastForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PolohaSpojeForm.resx">
+      <DependentUpon>PolohaSpojeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SearchSpojForm2.resx">
+      <DependentUpon>SearchSpojForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatistikaForm.resx">
+      <DependentUpon>StatistikaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TimeForm.resx">
+      <DependentUpon>TimeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TimeForm2.resx">
+      <DependentUpon>TimeForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TimeForm3.resx">
+      <DependentUpon>TimeForm3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ZmenitTrasuForm.resx">
+      <DependentUpon>ZmenitTrasuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\SearchSpojForm.resx">
+      <DependentUpon>SearchSpojForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
